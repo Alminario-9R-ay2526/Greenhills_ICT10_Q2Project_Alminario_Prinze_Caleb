@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT 10 Student Showcase 2026</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- PyScript CSS & JS -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
+</head>
+<body class="bg-light">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm mb-4">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">ICT 10 Showcase 2026</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link active" href="index.html">Meet the Creator</a>
+                <a class="nav-link" href="#">Seatwork 1</a>
+                <a class="nav-link" href="#">Skills Test</a>
+                <a class="nav-link" href="#">Participation 2</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Showcase Container -->
+    <div class="container">
+        <div class="row g-4">
+            <!-- Left Column: Creator Profile -->
+            <div class="col-md-5">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header bg-primary text-white fw-bold">
+                        Meet the Creator
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted small">Click to load creator profile using a Python Dictionary.</p>
+                        <button type="button" class="btn btn-primary w-100 mb-3" py-click="display_creator">
+                            Load Creator Info
+                        </button>
+                        <div id="creator_output" class="border rounded p-3 bg-white"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Interactive Guestbook / Shoutout -->
+            <div class="col-md-7">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header bg-dark text-white fw-bold">
+                        Showcase Visitor Log & Quarter Highlights
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="visitor_name" class="form-label">Your Name</label>
+                            <input type="text" id="visitor_name" class="form-control" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="visitor_message" class="form-label">Feedback / Message</label>
+                            <input type="text" id="visitor_message" class="form-control" placeholder="Leave a comment on my Q2 showcase">
+                        </div>
+                        <button type="button" class="btn btn-success w-100 mb-3" py-click="add_visitor_message">
+                            Post to Showcase Wall
+                        </button>
+                        <div id="wall_output" class="border rounded p-3 bg-white"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="py" src="main.py"></script>
+</body>
+</html>
